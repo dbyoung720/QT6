@@ -1,0 +1,17 @@
+{
+    "server": "1.2.3.4:2000",
+    "token": "000-000",
+    "device_model": "test",
+    "device_variant": "v1",
+    "device_screen_type": "TOUCH",
+    "app_build": "1.2.3",
+    "platform": "app",
+    "sync": {
+        "interval": {
+            "seconds": 1,
+            "minutes": 2,
+            "hours": 3,
+            "days": 4
+        }
+    }
+}

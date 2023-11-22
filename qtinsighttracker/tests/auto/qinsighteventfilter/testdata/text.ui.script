@@ -1,0 +1,65 @@
+[
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^MainWindow/centralwidget/lineEdit",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^MainWindow/centralwidget/lineEdit$",
+                "position": "10 10",
+                "data": "LeftButton"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "key",
+            "data": [
+                "Key_Space"
+            ]
+        },
+        "Events": [
+            {
+                "type": "KeyPress",
+                "object": "^MainWindow/centralwidget/lineEdit$",
+                "data": "\\[text\\]"
+            },
+            {
+                "type": "KeyRelease",
+                "object": "^MainWindow$",
+                "data": "\\[text\\]"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "key",
+            "data": [
+                "Key_Pause"
+            ]
+        },
+        "Events": [
+            {
+                "type": "KeyPress",
+                "object": "^MainWindow$",
+                "data": "Pause"
+            },
+            {
+                "type": "KeyRelease",
+                "object": "^MainWindow$",
+                "data": "Pause"
+            }
+        ]
+    }
+]

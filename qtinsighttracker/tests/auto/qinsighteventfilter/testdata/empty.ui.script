@@ -1,0 +1,89 @@
+[
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "LeftButton"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "doubleclick",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+               "type": "MouseButtonPress",
+               "object": "^MainWindowWindow$",
+               "position": "10 10",
+               "data": "LeftButton"
+            },
+            {
+                "type": "MouseButtonDblClick",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "LeftButton",
+                "events": 2
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "RightButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "RightButton"
+            },
+            {
+                "type": "ContextMenu",
+                "object": "^MainWindow$",
+                "position": "10 10"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^MainWindow$",
+                "position": "10 10",
+                "data": "RightButton"
+            }
+        ]
+    }
+ ]

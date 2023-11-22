@@ -1,0 +1,27 @@
+{
+    "server": "1.2.3.4:2000",
+    "token": "000-000",
+    "device_model": "test",
+    "device_variant": "v1",
+    "device_screen_type": "TOUCH",
+    "app_build": "1.2.3",
+    "platform": "app",
+    "storage": "",
+    "sync": {
+        "interval": {
+            "seconds": 42
+        },
+        "max_batch_size": 43
+    },
+    "events": [
+        "FocusIn",
+        "ContextMenu",
+        "KeyPress",
+        "KeyRelease",
+        "MouseButtonDblClick",
+        "MouseButtonPress",
+        "MouseButtonRelease",
+        "Shortcut",
+        "Show"
+    ]
+}

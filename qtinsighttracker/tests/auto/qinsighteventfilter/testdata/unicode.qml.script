@@ -1,0 +1,19 @@
+[
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "テスト",
+                "position": "10 10",
+                "data": "LeftButton"
+            }
+        ]
+    }
+]

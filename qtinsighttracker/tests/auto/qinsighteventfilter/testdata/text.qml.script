@@ -1,0 +1,70 @@
+[
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^QQuickView/QQuickRootItem/HelloTextField$",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+                "type": "FocusIn",
+                "object": "^QQuickView/QQuickRootItem/HelloTextField$",
+                "data": "MouseFocusReason"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^QQuickView/QQuickRootItem/HelloTextField$",
+                "position": "10 10",
+                "data": "LeftButton"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "key",
+            "data": [
+                "Key_Space"
+            ]
+        },
+        "Events": [
+            {
+                "type": "KeyPress",
+                "object": "^QQuickView/QQuickRootItem/HelloTextField$",
+                "data": "\\[text\\]"
+            },
+            {
+                "type": "KeyRelease",
+                "object": "^QQuickView/QQuickRootItem$",
+                "data": "\\[text\\]"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "key",
+            "data": [
+                "Key_MediaPlay"
+            ]
+        },
+        "Events": [
+            {
+                "type": "KeyPress",
+                "object": "^QQuickView/QQuickRootItem$",
+                "data": "Media Play"
+            },
+            {
+                "type": "KeyRelease",
+                "object": "^QQuickView/QQuickRootItem$",
+                "data": "Media Play"
+            }
+        ]
+    }
+]

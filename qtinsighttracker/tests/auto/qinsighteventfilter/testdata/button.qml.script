@@ -1,0 +1,41 @@
+[
+    {
+        "Action": {
+            "type": "click",
+            "data": [
+                "LeftButton",
+                "10 10"
+            ]
+        },
+        "Events": [
+            {
+                "type": "MouseButtonPress",
+                "object": "^QQuickView/QQuickRootItem/HelloButton$",
+                "position": "10 10",
+                "data": "LeftButton"
+            },
+            {
+                "type": "MouseButtonRelease",
+                "object": "^QQuickView/QQuickRootItem/HelloButton$",
+                "position": "10 10",
+                "data": "LeftButton"
+            }
+        ]
+    },
+    {
+        "Action": {
+            "type": "key",
+            "data": [
+                "Key_C",
+                "ControlModifier"
+            ]
+        },
+        "Events": [
+            {
+                "type": "Shortcut",
+                "object": "^QQuickView/QQuickRootItem/HelloButton/QQuickShortcut$",
+                "data": "Ctrl\\+C"
+            }
+        ]
+    }
+]

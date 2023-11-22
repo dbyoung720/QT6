@@ -1,0 +1,17 @@
+// Copyright (C) 2023 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial
+
+/*!
+    \qmlmodule QtInsightTracker 6.\QtMinorVersion
+    \title Qt Insight Tracker QML Types
+    \ingroup qmlmodules
+    \brief Enables the use of Qt Insight Tracker with QML.
+
+    To import the QML types into your application, use the following import statement
+    in your .qml file:
+
+    \qml
+    import QtInsightTracker
+    \endqml
+
+ */

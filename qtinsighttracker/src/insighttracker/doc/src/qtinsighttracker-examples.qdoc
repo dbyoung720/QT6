@@ -1,0 +1,33 @@
+// Copyright (C) 2023 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial
+
+/*!
+    \page qtinsightracker-examples.html
+    \title Qt Insight Tracker Examples
+    \brief Example projects demonstrating the functionality in Qt Insight Tracker.
+
+    Qt Insight Tracker has the following examples:
+
+    \annotatedlist insighttracker-examples
+
+    \section1 Using Insight Tracker with other Qt Module Examples
+
+    Qt Insight Tracker can be easily used with examples from other Qt modules.
+    Modifying the \uicontrol {Run Settings} for the example project in Qt
+    Creator, you can enable the \c insighttracker plugin. This will enable Qt
+    Insight Tracker at start of the example and will start tracking events.
+
+    \badcode
+    -plugin insighttracker
+    \endcode
+
+    \borderedimage examples_run_settings.png
+
+    The plugin works with both Qt Quick and Widgets applications. To change
+    the tracked events, you can either modify the default configuration file
+    (\c qtinsight/qtinsight.conf) or you can use \c QT_INSIGHT_CONFIG environment
+    variable to specify you own configuration file.
+
+    See \l{QInsightConfiguration} for more information about the configuration.
+
+ */

@@ -1,0 +1,115 @@
+// Copyright (C) 2023 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial
+
+/*!
+    \page qtinsighttracker-overview.html
+    \title Qt Insight Tracker Overview
+    \brief Describes the Qt Insight Tracker module.
+
+    \section1 Tracking Application Usage
+
+    You can use Qt Insight Tracker from your application code to track
+    application usage with two event types: screen view events and click
+    events.
+
+    Use screen view event to get insight into how users navigate your
+    application. You can track events whenever your application changes UI
+    views or states, or whenever there are other UI flow changes such as
+    dialog and notification pop-ups.
+
+    From QML code, this can be done for example with:
+
+    \snippet coffee/ApplicationFlow.qml 3
+
+    Use click events to track which part of UI users most often interact with.
+    Click event also tracks the previously used screen view to recognize which
+    state the UI was in when the event occurred. Individual UI elements can
+    send the event with QML code:
+
+    \snippet coffee/CoffeeButton.qml 0
+
+    Some additional information about the device (model, variant, screen
+    resolution, and screen type) and the application (version, build, and Qt version)
+    is sent automatically on the application start.
+
+    A UUID is generated on the first use of Qt Insight Tracker and used in all
+    the events sent to the back-end server. It can identify all the events
+    coming from one particular device but not individual users.
+
+    \section1 Enabling Tracking
+
+    Qt Insight Tracker does not collect or send any data unless the application
+    explicitly enables it through the API. The application must have user's
+    concent before enabling the tracking.
+
+    \section1 Configuration
+
+    You can configure Qt Insight Tracker with a JSON configuration file and
+    with C++ and QML APIs. The configuration file is read at startup and you
+    can change the values from application code. You must make all configuration
+    changes before enabling the tracking.
+
+    To configure Qt Insight Tracker using a configuration file, add the following
+    JSON file:
+
+    \code
+    {
+        "server" : "collect-insight.qt.io",
+        "token" : "00000000-0000-0000-0000-000000000000",
+    }
+    \endcode
+
+    A \c token is used to match the data your application sends to your
+    Qt Insight Organization and you can find your token from the
+    \l{https://insight.qt.io}{Qt Insight Console}.
+
+    To configure Qt Insight Tracker from your application, add the following to
+    your QML code:
+
+    \qml
+    InsightConfiguration {
+        token: "1234"
+        syncInterval: 3600
+    }
+    \endqml
+
+    or your C++ code:
+
+    \code
+    QInsightTracker tracker;
+    tracker.configuration().syncInterval(3600);
+    \endcode
+
+    For more details on the configuration file syntax and the API, see
+    \l {QInsightConfiguration}.
+
+    \section1 Event Caching
+
+    By default, the tracked events are cached locally before being sent to the
+    back-end server. The tracked info is then retained if network connectivity
+    is not available or the application exits before the data has been sent. An
+    SQLite database is used for caching, but the implementation allows adding
+    other storage types later.
+
+    \section1 Event Filtering
+
+    Certain events can be filtered before they are sent to the back-end server.
+    This can be done with categories which can be attached to the QML components
+    using InsightCategory or used in the API calls.
+
+    Then you can configure the tracker with QInsightConfiguration::setCategories()
+    to only track events with matching category.
+
+    \section1 Offline Usage
+
+    You can configure Qt Insight Tracker to work in an offline mode, which
+    means that events are tracked normally to the local event cache but they
+    are never sent to the back-end server. This is useful for devices that do
+    not have network connectivity. To turn on offline mode, omit the \c{sync}
+    interval from the configuration json or set all values to zero.
+
+    Qt Insight Tracker comes with a separate command-line utility
+    (\c{Qt Insight Uploader}) that you can use to send the events to the back-end at
+    a later time. You need to retrive the database file from the device and then
+    run the \c{insightuploader} utility on your PC.
+*/

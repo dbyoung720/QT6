@@ -1,0 +1,47 @@
+include($QT_INSTALL_DOCS/global/qt-module-defaults.qdocconf)
+include($QT_INSTALL_DOCS/config/exampleurl-qtnetworkauth.qdocconf)
+
+project                 = QtInsightTracker
+description             = Qt Insight Tracker Reference Documentation
+version                 = $QT_VERSION
+buildversion            = Qt Insight Tracker | Commercial
+url                     = https://doc.qt.io/qtinsighttracker
+
+qhp.projects            = QtInsightTracker
+
+qhp.QtInsightTracker.file         = qtinsighttracker.qhp
+qhp.QtInsightTracker.namespace           = org.qt-project.qtinsightracker.$QT_VERSION_TAG
+qhp.QtInsightTracker.virtualFolder       = qtinsightracker
+qhp.QtInsightTracker.indexTitle          = Qt Insight Tracker
+qhp.QtInsightTracker.indexRoot           =
+
+qhp.QtInsightTracker.subprojects         = classes
+qhp.QtInsightTracker.subprojects.classes.title = C++ Classes
+qhp.QtInsightTracker.subprojects.classes.indexTitle = Qt Insight Tracker C++ Classes
+qhp.QtInsightTracker.subprojects.classes.selectors = class doc:headerfile
+qhp.QtInsightTracker.subprojects.classes.sortPages = true
+
+qhp.QtInsightTracker.subprojects.qmltypes.title      = QML Types
+qhp.QtInsightTracker.subprojects.qmltypes.indexTitle = Qt Insight Tracker QML Types
+qhp.QtInsightTracker.subprojects.qmltypes.selectors  = qmltype
+qhp.QtInsightTracker.subprojects.qmltypes.sortPages  = true
+
+qhp.QtInsightTracker.subprojects.examples.title = Examples
+qhp.QtInsightTracker.subprojects.examples.indexTitle = Qt Insight Tracker Examples
+qhp.QtInsightTracker.subprojects.examples.selectors = doc:example
+
+tagfile                 = qtinsightracker.tags
+
+depends                 += qtcore qtquick qtdoc qtcmake
+
+headerdirs  += .. ../../insighttrackerqml
+sourcedirs  += .. ../../insighttrackerqml
+imagedirs   += images
+
+examplesinstallpath     = insighttracker
+exampledirs += ../../../examples/insighttracker
+
+manifestmeta.highlighted.names = "QtInsightTracker/Qt Insight - Qt Quick Application"
+
+navigation.landingpage = "Qt Insight Tracker"
+navigation.cppclassespage = "Qt Insight Tracker C++ Classes"

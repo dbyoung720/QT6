@@ -1,0 +1,87 @@
+// Copyright (C) 2023 The Qt Company Ltd.
+// SPDX-License-Identifier: LicenseRef-Qt-Commercial
+
+/*!
+    \page qtinsighttracker-index.html
+    \title Qt Insight Tracker
+    \brief Provides Qt Insight Tracker.
+
+    Qt Insight is an analytics solution designed to provide real customer
+    insights on the usage of your application or device. It was created for
+    companies utilizing embedded technology to shed light on an application’s
+    performance, usage, and user data that may not be otherwise attainable.
+
+    Qt Insight Tracker provides C++ and QML APIs to track application usage
+    through events and send the analytic data to a
+    \l{https://www.qt.io/product/insight}{Qt Insight} back-end server.
+
+    \section1 Using the Module
+
+    Using a Qt module requires linking against the module library, either
+    directly or through other dependencies. Several build tools have dedicated
+    support for this, including CMake and qmake.
+
+    To import the QML types into your application, use the following import statement
+    in your .qml file:
+
+    \qml
+    import QtInsightTracker
+    \endqml
+
+    \section2 Building with CMake
+
+    Use the \c find_package() command to locate the needed module components in
+    the Qt6 package:
+
+    \badcode
+    find_package(Qt6 REQUIRED COMPONENTS InsightTracker)
+    target_link_libraries(mytarget PRIVATE Qt::InsightTracker)
+    \endcode
+
+    See also the \l{Build with CMake} overview.
+
+    \section2 Building with qmake
+
+    To configure the module for building with qmake, add the module as a value
+    of the QT variable in the project's .pro file:
+
+    \badcode
+    QT += insighttracker
+    \endcode
+
+    \section2 Overview
+
+    For a more detailed overview of Qt Insight Tracker, see \l {Qt Insight Tracker Overview}.
+
+    \section1 Examples
+    \list
+      \li \l {Qt Insight Tracker Examples}
+    \endlist
+
+    \section1 API Reference
+    \list
+      \li \l{Qt Insight Tracker C++ Classes}{C++ Classes}
+      \li \l{Qt Insight Tracker QML Types}{QML Types}
+    \endlist
+
+    \section1 Licenses
+
+    Qt Insight Tracker is available under commercial licenses from \l{The Qt Company}.
+    See \l{Qt Licensing} for further details.
+
+    \section1 Technology Preview
+
+    Qt Insight Tracker is a technology preview. There are no source or binary
+    compatibility guarantees, as APIs may change based on user feedback and
+    general improvements.
+
+*/
+
+/*!
+    \module QtInsightTracker
+    \title Qt Insight Tracker C++ Classes
+    \ingroup modules
+    \qtcmakepackage InsightTracker
+    \qtvariable insighttracker
+    \brief Provides classes for Qt Insight Tracker.
+*/
